@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "上传资料",
+  "usingComponents": {
+    "uploadImg": "../components/uploadImg/uploadImg"
+  }
+}

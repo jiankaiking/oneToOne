@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/component/popup/popup",
+
+    "pages/examine/pinfo/pinfo",
+
+    "pages/cargoadmin/index/index",
+    "pages/cargoadmin/addcargo/addcargo",
+    "pages/examine/info/info",
+    "pages/examine/index/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#7F8389",
+    "selectedColor": "#3B99FA",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/examine/index/index",
+        "iconPath": "./static/image/zb.png",
+        "selectedIconPath": "./static/image/zbs.png",
+        "text": "账本审批"
+      },
+      {
+        "pagePath": "pages/cargoadmin/index/index",
+        "iconPath": "./static/image/hwgl.png",
+        "selectedIconPath": "./static/image/htgls.png",
+        "text": "货物管理"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

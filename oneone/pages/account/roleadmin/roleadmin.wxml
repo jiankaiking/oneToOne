@@ -1,0 +1,16 @@
+<view class="pages">
+  <view class="pages-hand rbox box_space_a box_y_center">
+    <view class="hand-select rbox box_space_a box_y_center">
+      <text>添加列表</text>
+    </view>
+    <view class="hand-add rbox box_space_a box_y_center" >
+      <image src="../../../static/image/add.png"></image>
+      <text  bindtap="go" data-r="../addroleadmin/addroleadmin?id={{customerId}}">添加成员</text>
+    </view>
+  </view>
+  <view class="item-content">
+    <view class="item box_sizing_pd" wx:for="{{listArr}}" wx:key="{{index}}" bindtap="go"  data-r="../addroleadmin/addroleadmin?itemid={{item.id}}">
+       <view class="title">{{item.memberName}}</view>
+    </view>
+  </view>
+</view>

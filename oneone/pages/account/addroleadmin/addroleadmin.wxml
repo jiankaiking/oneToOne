@@ -1,0 +1,33 @@
+<view class="pages ">
+  <view class="add-tip">
+    <text>添加成员信息</text>
+  </view>
+  <view class="add-form box_sizing_pd">
+    <view class="add-item rbox box_space_b">
+      <view class="add-name">主体类型</view>
+      <view class="right-img rbox box_y_center">
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+          <view class="picker">
+            {{array[index]}}
+          </view>
+        </picker>
+        <image src="../../../static/image/right.png"></image>
+      </view>
+    </view>
+    <view class="add-item rbox box_space_b">
+      <view class="add-name">{{index == 0?'姓名':'名称'}}</view>
+      <input placeholder="请输入" value="{{memberName}}" bindinput="bindAndSet" data-key="memberName"></input>
+    </view>
+    <view wx:if="{{index == 0}}" class="add-item rbox box_space_b">
+      <view class="add-name">身份证号</view>
+      <input placeholder="请输入" value="{{idNumber}}" bindinput="bindAndSet" data-key="idNumber"></input>
+    </view>
+    <view wx:if="{{index == 1}}" class="add-item rbox box_space_b">
+      <view class="add-name">营业执照号</view>
+      <input placeholder="请输入" value="{{idNumber}}" bindinput="bindAndSet" data-key="idNumber"></input>
+    </view>
+  </view>
+  <view class="btnCont margin-cont">
+    <button class="true-btn" bindtap="add"> 确认</button>
+  </view>
+</view>

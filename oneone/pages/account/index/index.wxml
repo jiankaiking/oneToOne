@@ -1,0 +1,32 @@
+<view class="pages">
+  <view class="pages-hand rbox box_space_a box_y_center">
+    <view class="hand-select rbox box_space_a box_y_center">
+      <picker range="{{pickeArr}}" mode="selector"  bindchange="bindPickerChange" value="{{mutIndex}}" range-key="name">
+        <text>{{pickeArr[mutIndex].name}}</text>
+        <image src="../../../static/image/add.png"></image>
+      </picker>
+    </view>
+    <view class="hand-add rbox box_space_a box_y_center" bindtap="go" data-r="../addaccount/addaccount">
+      <image src="../../../static/image/add.png"></image>
+      <text>新增账本</text>
+    </view>
+  </view>
+  <view class="item-content">
+    <view class="item" bindtap="go" data-r="../addaccount/addaccount?type={{item.customerType}}&customerId={{item.customerId}}" wx:for="{{listArr}}" wx:for-index="index" wx:key="{{index}}">
+      <view class="title">编号：{{item.billNo}}</view>
+      <view class="name">公司名称:{{item.customerName}}</view>
+      <view class="monney {{item.status == 0?'awite':(item.status == 1?'success':'erro')}}">¥ {{item.amount}}
+        <text>元</text>
+      </view>
+      <view class="valBtn rbox box_space_b box_y_center">
+        <view class="valBtn-left">
+          <text class="{{item.status == 0?'awite':(item.status == 1?'success':'erro')}}">{{item.status == 0?'待审核':(item.status == 1?'审批通过':'审批拒绝')}}</text>
+        </view>
+        <view class="valBtn-right">
+          <button wx:if="{{item.status == 1 && item.isDealers == 0}}" class="bg-success" catchtap="go" data-r="../roleadmin/roleadmin?customerId={{item.customerId}}">管理成员</button>
+          <button wx:if="{{item.status == 2}}" class="bg-erro" catchtap="go" data-r="../addaccount/addaccount?status={{item.status}}&type={{item.customerType}}&customerId={{item.customerId}}">修改资料</button>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

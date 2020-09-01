@@ -1,0 +1,8 @@
+
+<view class='ui_uploader_cell'>
+    <view class='ui_uploader_item' wx:if="{{!showUpload}}">
+        <icon class='ui_uploader_item_icon' bindtap='clearImg' type="clear" size="20" color="red"/>
+        <image class="showImg" bindtap='showImg'  src='{{showImgUrl}}'></image>
+    </view>
+    <view class='ui_uploader' bindtap='upload' hidden="{{!showUpload}}"></view>
+</view>

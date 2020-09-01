@@ -1,0 +1,128 @@
+.line-clamp1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.line-clamp2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.line-clamp3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.rbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row;
+  flex-flow: row;
+}
+
+.cbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: column;
+  flex-flow: column;
+}
+
+.rbox_wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+.box_x_center {
+  justify-content: center;
+}
+
+.box_x_start {
+  justify-content: flex-start;
+}
+
+.box_x_end {
+  justify-content: flex-end;
+}
+
+/* 单个内容布局 */  
+.box_1_center{align-self: center}  
+.box_1_start{align-self:flex-start}  
+.box_1_end{align-self: flex-end} 
+
+/* 多内容布局 */  
+.box_wrap_center{align-content: center}  
+.box_wrap_start{align-content:flex-start}  
+.box_wrap_end{align-content: flex-end}  
+.box_wrap_space_a{align-content: space-around}
+.box_wrap_space_b{align-content: space-between}
+
+/* 平均分布 */  
+.box_space_a{justify-content: space-around}  
+
+/* 两边对齐 */  
+.box_space_b{justify-content: space-between}
+
+/* 内容 X 轴布局 */
+
+.box_x_center {
+  justify-content: center;
+}
+
+.box_x_start {
+  justify-content: flex-start;
+}
+
+.box_x_end {
+  justify-content: flex-end;
+}
+
+/* 内容 Y 轴布局 */
+
+.box_y_center {
+  align-items: center;
+}
+
+.box_y_start {
+  align-items: flex-start;
+}
+
+.box_y_end {
+  align-items: flex-end;
+}
+
+.box_sizing_pd {
+  box-sizing: border-box;
+  padding: 0 30rpx;
+}
+
+.true-btn {
+  color: #fff;
+  background: linear-gradient(90deg, rgba(120, 187, 255, 1) 0%, rgba(59, 153, 250, 1) 100%);
+  border-radius: 47rpx;
+  display: block;
+  width: 100%;
+  font-size: 36rpx;
+  font-weight: normal;
+}
+
+.true-btn:not([size='mini']) {
+  /* 修改宽高 */
+  width: 100%;
+}
+.btnCont{
+  padding: 0 30rpx; box-sizing: border-box;
+}

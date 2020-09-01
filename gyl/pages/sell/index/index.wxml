@@ -1,0 +1,58 @@
+<wxs module="filter" src="../../filter/index.wxs"></wxs>
+<view class="pages">
+  <view class="top-tabcad box_space_a rbox box_y_center">
+    <view class="card-item {{tipIndex == 0?'active':''}}" bindtap="changeTipIndex" data-index="0">采购</view>
+    <view class="card-item {{tipIndex == 1?'active':''}}" bindtap="changeTipIndex" data-index="1">销售 </view>
+  </view>
+  <view class="add-sell rbox box_y_center box_x_center" wx:if="{{tipIndex == 0}}" bindtap="go" data-r="../addsell/addsell">
+    <image src="../../../static/image/add.png"></image>
+    <text> 新增采购</text>
+  </view>
+  <view wx:if="{{tipIndex == 1 && isDealers == 1}}" class="add-sell rbox box_y_center box_x_center" bindtap="go" data-r="../addSellInfo/addSellInfo">
+    <image src="../../../static/image/add.png"></image>
+    <text> 新增销售单</text>
+  </view>
+  <view class="messages-content box_sizing_pd ">
+    <view class="item" wx:for="{{listArr}}" wx:key="{{index}}" wx:if="{{tipIndex == 0}}">
+      <view class="item-info-bot  rbox box_space_b">
+        <view>采购单号：{{item.orderNo}}</view>
+        <view>货物名称：{{item.goodsName}}</view>
+      </view>
+      <view class="item-info-bot  rbox box_space_b margin-row">
+        <view>货物数量：{{item.purchaseNumber}}</view>
+        <view>采购时间：{{filter.getDate(item.createTime)}}</view>
+      </view>
+
+    </view>
+    <view class="item" wx:for="{{listArr}}" wx:key="{{index}}" wx:if="{{tipIndex == 1 && isDealers == 1}}" bindtap="go" data-r="../sellInfo/sellInfo?id={{item.id}}">
+      <view class="item-info-bot  rbox box_space_b">
+        <view>货物名称：{{item.goodsName}}</view>
+        <view>货物数量：{{item.goodsNumber}}</view>
+      </view>
+      <view class="item-info-bot  rbox box_space_b margin-row">
+        <view>销售单价：{{item.salesUnitPrice}}</view>
+        <view>销售额：{{item.salesTotalPrice}}</view>
+      </view>
+      <view class="item-info-bot  rbox box_space_b">
+        <view>销售时间： {{filter.getDate(item.createTime)}}</view>
+      </view>
+    </view>
+    <view class="item" wx:for="{{listArr}}" wx:key="{{index}}" wx:if="{{tipIndex == 1&& isDealers == 0}}" bindtap="goRouter" data-id="{{item.id}}" data-status="{{item.status}}">
+      <view class="item-info-bot  rbox box_space_b">
+        <view>货物名称：{{item.goodsName}}</view>
+        <view>货物数量：{{item.goodsNumber}}</view>
+      </view>
+      <view class="item-info-bot  rbox box_space_b margin-row">
+        <view>销售单价：{{item.salesUnitPrice}}</view>
+        <view>销售额：{{item.salesTotalPrice}}</view>
+      </view>
+      <view class="item-info-bot  rbox box_space_b margin-row">
+        <view>销售时间： {{filter.getDate(item.createTime)}}</view>
+        <view>发货状态： {{item.status == 1?'未发货':'已发货'}}</view>
+      </view>
+      <view wx:if="{{item.customerName}}" class="item-info-bot  rbox box_space_b">
+        <view>采购企业： {{item.customerName}}</view>
+      </view>
+    </view>
+  </view>
+</view>

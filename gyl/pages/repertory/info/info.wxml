@@ -1,0 +1,60 @@
+<wxs module="filter" src="../../filter/index.wxs"></wxs>
+<view class="pages box_sizing_pd">
+  <view class="nav-item-content" wx:if="{{type == 0}}">
+    <view class="item-list rbox box_space_b">
+      <text>出库单号</text>
+      <text>{{info.orderNo}}</text>
+    </view>
+    <view class="item-list rbox box_space_b">
+      <text>商品类型</text>
+      <text>{{info.goodsTypeName}}</text>
+    </view>
+    <view class="item-list rbox box_space_b">
+      <text>出库货物</text>
+      <text>{{info.goodsName}}</text>
+    </view>
+    <view class="item-list rbox box_space_b">
+      <text>出库数量</text>
+      <text>{{info.number}}</text>
+    </view>
+    <view class="item-list rbox box_space_b">
+      <text>出库时间</text>
+      <text>{{filter.getDate(info.createTime)}}</text>
+    </view>
+    <view class="item-list rbox box_space_b">
+      <text>出库人</text>
+      <text>{{info.userName}}</text>
+    </view>
+    <view class="item-list rbox box_space_b">
+      <text>出库备注</text>
+      <text>{{info.remark}}</text>
+    </view>
+  </view>
+  <!-- 入库 -->
+  <view class="nav-item-content" wx:if="{{type == 1}}">
+    <view class="item-list rbox box_space_b">
+      <text>入库单号</text>
+      <text>{{info.orderNo}}</text>
+    </view>
+    <view class="item-list rbox box_space_b">
+      <text>商品类型</text>
+      <text>{{info.goodsTypeName}}</text>
+    </view>
+    <view class="item-list rbox box_space_b">
+      <text>入库货物</text>
+      <text>{{info.goodsName}}</text>
+    </view>
+    <view class="item-list rbox box_space_b">
+      <text>入库数量</text>
+      <text>{{info.number}}</text>
+    </view>
+    <view class="item-list rbox box_space_b">
+      <text>入库时间</text>
+      <text>{{filter.getDate(info.createTime)}}</text>
+    </view>
+    <view class="item-list rbox box_space_b">
+      <text>入库人</text>
+      <text>{{info.userName}}</text>
+    </view>
+  </view>
+</view>

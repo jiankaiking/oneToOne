@@ -1,0 +1,33 @@
+@import "../../static/css/flex";
+
+.login-box {
+  margin: 70rpx 0;
+}
+
+.login-logo {
+  display: block;
+  width: 120rpx;
+  height: 120rpx;
+  box-shadow: 0px 4rpx 8rpx 4rpx rgba(225, 237, 249, 1); margin: 36rpx 0;
+}
+.login-title{
+  color: #333333; font-weight: bold; font-size: 40rpx;
+}
+.login-form-item{
+  border-bottom: 1rpx solid #E4E4E4;
+}
+.login-form-item input{
+   font-size: 28rpx; color: #C4C4C4; padding: 25rpx 0; width: 100%
+}
+.code-img{
+  height: 52rpx; width: 130rpx;
+}
+.form-select{
+  width: 120rpx;
+}
+.btn-view{
+  margin: 100rpx 0;
+}
+.login-form input{
+  color: #333;
+}

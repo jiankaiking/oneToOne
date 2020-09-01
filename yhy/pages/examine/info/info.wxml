@@ -1,0 +1,104 @@
+<view class="pages">
+  <view class="view-padding rbox box_y_center box_space_b">
+    <view class="left-content">主体类型</view>
+    <view>企业</view>
+  </view>
+  <view class="view-padding rbox box_y_center box_space_b">
+    <view class="left-content">企业名称</view>
+    <view class="right-content">{{info.companyName}}</view>
+  </view>
+  <view class="view-padding rbox box_y_center box_space_b">
+    <view class="left-content">注册类型</view>
+    <view class="right-content">{{info.registType}}</view>
+  </view>
+  <view class="view-padding rbox box_y_center box_space_b">
+    <view class="left-content">法人代表姓名</view>
+    <view class="right-content">{{info.legalPersonName}}</view>
+  </view>
+  <view class="view-padding rbox box_y_center box_space_b">
+    <view class="left-content">法人身份证号</view>
+    <view class="right-content">{{info.legalPersonIdNo}}</view>
+  </view>
+  <view class="view-padding border rbox box_y_center box_space_b">
+    <view class="left-content">证件类型</view>
+    <view class="right-content">{{info.papersType}}</view>
+  </view>
+  <view class="view-padding rbox box_y_center box_space_b">
+    <view class="left-content">统一社会信用代码</view>
+    <view class="right-content">{{info.unifiedSocialCreditCode}}</view>
+  </view>
+  <view class="view-padding border rbox box_y_center box_space_b">
+    <view class="left-content">银行账号</view>
+    <view class="right-content">{{info.bankAccount}}</view>
+  </view>
+  <view class="view-padding rbox box_y_center box_space_b">
+    <view class="left-content">开户银行</view>
+    <view class="right-content">{{info.bank}}</view>
+  </view>
+  <view class="view-padding  rbox box_y_center box_space_b">
+    <view class="left-content">开户省市</view>
+    <view class="right-content">{{info.bankLocation}}</view>
+  </view>
+  <view class="view-padding rbox box_y_center box_space_b">
+    <view class="left-content">所属支行</view>
+    <view class="right-content">{{info.bankOfBranch}}</view>
+  </view>
+  <view class="view-cebter border cbox box_y_center box_space_b">
+    <view class="top-content">
+      <image src="{{info.blOrUscc}}"></image>
+    </view>
+    <view class="bottom-content">营业执照复印件或统一社会信用代码复印件</view>
+  </view>
+  <view class="view-cebter border cbox box_y_center box_space_b">
+    <view class="top-content">
+      <image src="{{info.idCardFrontImg}}"></image>
+    </view>
+    <view class="bottom-content">法人身份证复印件-国徽面</view>
+  </view>
+  <view class="view-cebter border cbox box_y_center box_space_b">
+    <view class="top-content">
+      <image src="{{info.idCardBackImg}}"></image>
+    </view>
+    <view class="bottom-content">法人身份证复印件-人像面</view>
+  </view>
+  <view class="view-cebter border cbox box_y_center box_space_b">
+    <view class="top-content">
+      <image src="{{info.bankAccountProve}}"></image>
+    </view>
+    <view class="bottom-content">银行账户证明</view>
+  </view>
+  <view class="other-text">请上传其他资料，并录入信息</view>
+  <view class="view-cebter border-bottom-type cbox box_y_center box_space_b">
+    <view class="top-content">
+      <image src="{{info.otherData[0].otherDataVlaue}}"></image>
+    </view>
+  </view>
+  <view class="view-cebter border-bottom-type cbox box_y_center box_space_b">
+    <view class="top-content">
+      <image src="{{info.otherData[1].otherDataVlaue}}"></image>></view>
+  </view>
+  <view class="view-cebter border-bottom-type cbox box_y_center box_space_b">
+    <view class="top-content">
+      <image src="{{info.otherData[2].otherDataVlaue}}"></image>
+    </view>
+  </view>
+  <view class="button-cont rbox box_y_center box_space_b" wx:if="{{status == 0}}">
+    <view class="left-content" bindtap="showPopup" data-index="no">
+      <button>申请驳回</button>
+    </view>
+    <view class="right-content" bindtap="showPopup" data-type="yes">
+      <button>申请通过</button>
+    </view>
+  </view>
+</view>
+<popup id='popup' title='审批额度' bind:success="_success">
+  <view class="center-view">
+    <text>¥</text>
+    <input bindinput="getMoney"></input>
+  </view>
+</popup>
+<popup id='popup1' title='驳回原因' bind:success="reasonTrue">
+  <view class="center-view">
+    <textarea auto-height bindinput='bindTextAreaBlur' value="{{remark}}" placeholder="驳回原因" />
+  </view>
+</popup>

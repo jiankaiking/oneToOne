@@ -1,0 +1,146 @@
+<view class="pages ">
+  <view class="add-tip">
+    <text>添加成员信息</text>
+  </view>
+  <view class="add-form box_sizing_pd">
+    <view class="add-item rbox box_space_b">
+      <view class="add-name">主体类型</view>
+      <view class="right-img rbox box_y_center">
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+          <view class="picker">
+            {{array[index]}}
+          </view>
+        </picker>
+        <image src="../../../static/image/right.png"></image>
+      </view>
+    </view>
+    <!-- 个人 -->
+    <view wx:if="{{index == 0}}">
+      <view class="add-item rbox box_space_b">
+        <view class="add-name">姓名</view>
+        <input placeholder="请输入" value="{{personal.realName}}" bindinput="bindAndSet" data-key="personal.realName"></input>
+      </view>
+      <view class="add-item rbox box_space_b">
+        <view class="add-name">身份证号</view>
+        <input placeholder="请输入" value="{{personal.idNo}}" bindinput="bindAndSet" data-key="personal.idNo"></input>
+      </view>
+      <view class="add-item rbox box_space_b">
+        <view class="add-name">身份证到期日</view>
+        <view class="right-img rbox box_y_center">
+          <picker mode="date" value="{{personal.idCardEndTime}}" start="2015-09-01" end="9999-12-31" bindchange="bindDateChange">
+            <view class="picker">
+              {{personal.idCardEndTime?personal.idCardEndTime:'请选择'}}
+            </view>
+          </picker>
+          <view class="long-item">
+            <checkbox-group bindchange="checkboxChange">
+              <label class="checkbox">
+                <checkbox value="1" checked="{{personal.idCardEndTime=='9999-12-31'?true:false}}" /> 长期
+              </label>
+            </checkbox-group>
+          </view>
+        </view>
+      </view>
+      <view class="add-item rbox box_space_b" bindtap="go" data-r="../updatainfo/updatainfo?type={{index}}">
+        <view class="add-name">身份证复印件</view>
+        <view class="right-img rbox box_y_center">
+          <view class="picker color">上传</view>
+          <image src="../../../static/image/right.png"></image>
+        </view>
+      </view>
+      <view class="add-item rbox box_space_b" bindtap="goAtherinfo" data-r="../otherinfo/otherinfo">
+        <view class="add-name">其他资料</view>
+        <view class="right-img rbox box_y_center">
+          <view class="picker color">上传</view>
+          <image src="../../../static/image/right.png"></image>
+        </view>
+      </view>
+    </view>
+    <!-- 企业 -->
+    <view wx:if="{{index == 1}}">
+      <view class="add-item rbox box_space_b">
+        <view class="add-name">企业名称</view>
+        <input placeholder="请输入" value="{{company.companyName}}" bindinput="bindAndSet" data-key="company.companyName"></input>
+      </view>
+      <view class="add-item rbox box_space_b">
+        <view class="add-name">注册类型</view>
+        <view class="right-img rbox box_y_center">
+          <picker bindchange="bindcompanyTypechange" value="{{company.registType}}" range="{{companyTypeArr}}">
+            <view class="picker">
+              {{companyTypeArr[company.registType]}}
+            </view>
+          </picker>
+          <image src="../../../static/image/right.png"></image>
+        </view>
+        <!-- <input placeholder="请输入" value="{{company.registType}}" bindinput="bindAndSet" data-key="company.registType"></input> -->
+      </view>
+      <view class="add-item rbox box_space_b">
+        <view class="add-name">法人代表姓名</view>
+        <input placeholder="请输入" value="{{company.legalPersonName}}" bindinput="bindAndSet" data-key="company.legalPersonName"></input>
+      </view>
+      <view class="add-item rbox box_space_b">
+        <view class="add-name">法人身份证号</view>
+        <input placeholder="请输入" value="{{company.legalPersonIdNo}}" bindinput="bindAndSet" data-key="company.legalPersonIdNo"></input>
+      </view>
+      <view class="add-item rbox box_space_b" bindtap="go" data-r="../updatainfo/updatainfo?type={{index}}">
+        <view class="add-name">身份证复印件</view>
+        <view class="right-img rbox box_y_center">
+          <view class="picker color">上传</view>
+          <image src="../../../static/image/right.png"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view wx:if="{{index == 1}}" class="border-top box_sizing_pd">
+    <view class="add-item rbox box_space_b">
+      <view class="add-name">证件类型</view>
+      <view class="right-img rbox box_y_center">
+        <picker bindchange="bindTypechange" value="{{company.papersType}}" range="{{typeArr}}">
+          <view class="picker">
+            {{typeArr[company.papersType]}}
+          </view>
+        </picker>
+        <image src="../../../static/image/right.png"></image>
+      </view>
+    </view>
+    <view class="add-item rbox box_space_b">
+      <view class="add-name">统一社会信用代码</view>
+      <input placeholder="请输入" value="{{company.unifiedSocialCreditCode}}" bindinput="bindAndSet" data-key="company.unifiedSocialCreditCode"></input>
+    </view>
+  </view>
+  <view wx:if="{{index == 1}}" class="box_sizing_pd">
+    <view class="add-item rbox box_space_b">
+      <view class="add-name">银行账号</view>
+      <input placeholder="请输入" value="{{company.bankAccount}}" bindinput="bindAndSet" data-key="company.bankAccount"></input>
+    </view>
+    <view class="add-item rbox box_space_b">
+      <view class="add-name">开户银行</view>
+      <input placeholder="请输入" value="{{company.bank}}" bindinput="bindAndSet" data-key="company.bank"></input>
+    </view>
+    <view class="add-item rbox box_space_b">
+      <view class="add-name">开户省市</view>
+      <view class="right-img rbox box_y_center">
+        <picker bindchange="changeMultiPicker" mode="region" value="{{region}}">
+          <view class="picker">{{region[0]}} - {{region[1]}}</view>
+        </picker>
+        <image src="../../../static/image/right.png"></image>
+      </view>
+    </view>
+    <view class="add-item rbox box_space_b">
+      <view class="add-name">所属支行</view>
+      <input placeholder="请输入" value="{{company.bankOfBranch}}" bindinput="bindAndSet" data-key="company.bankOfBranch"></input>
+    </view>
+    <view class="add-item rbox box_space_b" bindtap="goAtherinfo" data-r="../otherinfo/otherinfo">
+      <view class="add-name">其他资料</view>
+      <view class="right-img rbox box_y_center">
+        <view class="picker color">上传</view>
+        <image src="../../../static/image/right.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class="btnCont margin-cont">
+    <button class="true-btn" bindtap="add" wx:if="{{!customerId}}"> 确认</button>
+    <button class="true-btn" bindtap="edit" wx:if="{{status}}"> 修改</button>
+  </view>
+</view>

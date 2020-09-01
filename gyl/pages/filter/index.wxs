@@ -1,0 +1,41 @@
+var DateFr = {
+  getDate: function (time, splitStr) {
+
+    if (!time) return '';
+
+    var date = getDate(time);
+    var M = date.getMonth() + 1;
+    var y = date.getFullYear();
+    var d = date.getDate();
+
+    if (M < 10) M = "0" + M;
+    if (d < 10) d = "0" + d;
+
+    if (splitStr)
+      return y + splitStr + M + splitStr + d;
+    else
+      return {
+        y: y,
+        M: M,
+        d: d
+      };
+  },
+  //获取年月日
+  getFullTime: function (val) {
+    if (!val) return '';
+    var date = getDate(val);
+    var y = date.getFullYear();
+    var m = date.getMonth() + 1;
+    var d = date.getDate();
+    if (m < 10) m = "0" + m;
+    if (d < 10) d = "0" + d;
+    return y + '年' + m + '月' + d + '日'
+  },
+ 
+
+  
+}
+
+module.exports = {
+  getDate: DateFr.getFullTime
+}

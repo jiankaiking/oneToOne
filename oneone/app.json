@@ -1,0 +1,58 @@
+{
+  "pages": [
+    "pages/home/index/index",
+    "pages/login/login",
+    "pages/account/index/index",
+    "pages/my/index/index",
+
+    "pages/account/otherinfo/otherinfo",
+    "pages/account/updatainfo/updatainfo",
+    "pages/components/uploadImg/uploadImg",
+    "pages/account/addaccount/addaccount",
+    "pages/account/addroleadmin/addroleadmin",
+    "pages/account/roleadmin/roleadmin",
+    "pages/home/messages/messages",
+    "pages/my/contact/contact",
+    "pages/my/about/about",
+    "pages/supply/index/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#7F8389",
+    "selectedColor": "#3B99FA",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/home/index/index",
+        "iconPath": "./static/image/home.png",
+        "selectedIconPath": "./static/image/homes.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/account/index/index",
+        "iconPath": "./static/image/zb.png",
+        "selectedIconPath": "./static/image/zbs.png",
+        "text": "我的账本"
+      },
+      {
+        "pagePath": "pages/supply/index/index",
+        "iconPath": "./static/image/gyl.png",
+        "selectedIconPath": "./static/image/mys.png",
+        "text": "供应链"
+      },
+      {
+        "pagePath": "pages/my/index/index",
+        "iconPath": "./static/image/my.png",
+        "selectedIconPath": "./static/image/mys.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

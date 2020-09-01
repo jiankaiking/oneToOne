@@ -1,0 +1,5 @@
+/* pages/repertory/info/info.wxss *//* pages/home/messages/messages.wxss */
+@import '../../../static/css/flex';
+.item-list{
+  border-bottom: 1rpx solid #F6F6F6; font-size: 28rpx; padding: 25rpx 0;
+}

@@ -1,0 +1,23 @@
+<view class="pages">
+  <view class="top-tabcad box_space_a rbox box_y_center">
+    <view class="card-item {{tipIndex == 0?'active':''}}" bindtap="changeTipIndex" data-index="0">系统通知</view>
+    <view class="card-item {{tipIndex == 1?'active':''}}" bindtap="changeTipIndex" data-index="1">系统公告</view>
+  </view>
+  <view class="messages-content box_sizing_pd ">
+    <view class="content-tip rbox box_space_b">
+      <view>全部通知</view>
+      <view>全部已读</view>
+    </view>
+    <view class="messages-item" wx:for="{{2}}">
+      <view class="item-top box_sizing_pd rbox box_space_b">
+        <view class="top-left-text">开票待签收</view>
+        <view class="top-right-text  rbox box_y_center">
+          <text>查看详情</text>
+           <view class="right-text"><image src="../../../static/image/right.png"></image></view>
+        </view>
+      </view>
+      <view class="center-text box_sizing_pd line-clamp2">亲爱的用户：贵公司收到深圳前红海新能源科技有限公司于2020年3月01日开具的金票原单…</view>
+      <view class="bottom-time  box_sizing_pd">2020-03-03</view>
+    </view>
+  </view>
+</view>

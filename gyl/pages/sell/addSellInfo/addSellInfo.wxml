@@ -1,0 +1,32 @@
+<view class="pages box_sizing_pd">
+  <view class="nav-item-content">
+    <view class="item-list rbox box_space_b box_y_center">
+      <text>货物名称</text>
+      <picker bindchange="bindcompanyTypechange" value="{{typeArr[optionIndex][goodsName]}}" range-key="goodsName" range="{{goodArr}}">
+        <view class="picker">
+          {{goodArr[optionIndex].goodsName}}
+        </view>
+      </picker>
+    </view>
+    <view class="item-list rbox box_space_b box_y_center">
+      <text>货物数量</text>
+      <input value="{{addData.goodsNumber}}" bindinput="bindAndSet" data-key="addData.goodsNumber"></input>
+    </view>
+    <view class="item-list rbox box_space_b box_y_center">
+      <text>销售单价</text>
+      <input value="{{addData.salesUnitPrice}}" bindinput="bindAndSet" data-key="addData.salesUnitPrice"></input>
+    </view>
+    <view class="item-list rbox box_space_b box_y_center">
+      <text>销售额</text>
+      <input value="{{addData.goodsNumber * addData.salesUnitPrice}}"  disabled></input>
+    </view>
+    <!-- <view class="item-list rbox box_space_b box_y_center">
+      <text>销售时间</text>
+      <input value="{{addData.remark}}" bindinput="bindAndSet" data-key="addData.remark"></input>
+    </view> -->
+  </view>
+  <view class="btn-cont box_space_b rbox">
+    <button class="cbtn" bindtap="back">取消</button>
+    <button class="sbtn" bindtap="add">保存</button>
+  </view>
+</view>

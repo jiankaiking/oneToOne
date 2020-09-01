@@ -1,0 +1,66 @@
+<view class="pages-view">
+  <image class='background' src="../../../static/image/mypg.png" mode="aspectFill"></image>
+  <view class="topbox">
+    <view class="info rbox box_sizing_pd">
+      <view class="portrait">
+        <image src="../../../static/image/act.png"></image>
+      </view>
+      <view class="nameInfo cbox box_space_b">
+        <text>{{myInfo.nickname}}</text>
+        <text>{{myInfo.customerName}}</text>
+      </view>
+      <view class="message-info box_x_end">
+        <image src="../../../static/image/mys.png"></image>
+      </view>
+    </view>
+    <view class="swiper-view">
+      <swiper previous-margin='140rpx' circular next-margin='140rpx' bindchange="bindchange" style='height:{{swiperH}};'>
+        <swiper-item>
+          <!-- <image class='le-img {{nowIdx==index?"le-active":""}}' bindload='getHeight' src='{{item}}' style='height:{{swiperH}};'></image> -->
+          <view class='le-img {{nowIdx==0?"le-active":""}} boxview'>
+            <view class="title">已使用账本</view>
+            <view class="money">¥ {{mineInfo.used}}</view>
+            <!-- <view class="clicl">立即前往还款》</view> -->
+          </view>
+        </swiper-item>
+        <swiper-item>
+          <!-- <image class='le-img {{nowIdx==index?"le-active":""}}' bindload='getHeight' src='{{item}}' style='height:{{swiperH}};'></image> -->
+          <view class='le-img {{nowIdx==1?"le-active":""}} boxview'>
+            <view class="title">未使用账本</view>
+            <view class="money">¥ {{mineInfo.unuse}}</view>
+            <!-- <view class="clicl">立即前往还款》</view> -->
+          </view>
+        </swiper-item>
+      </swiper>
+    </view>
+  </view>
+  <view class="my-use box_sizing_pd ">
+    <view class="use-item rbox">
+      <view>
+        <image class="use-img" src="../../../static/image/rz.png"></image>
+      </view>
+      <view class="use-text">实名认证</view>
+      <view class="right-img">
+        <image  src="../../../static/image/right.png"></image>
+      </view>
+    </view>
+    <view class="use-item rbox"  bindtap="go" data-r="../contact/contact">
+      <view>
+        <image class="use-img" src="../../../static/image/lx.png"></image>
+      </view>
+      <view class="use-text">联系我们</view>
+      <view class="right-img">
+      <image  src="../../../static/image/right.png"></image>
+      </view>
+    </view>
+    <view class="use-item rbox" bindtap="go" data-r="../about/about">
+      <view>
+        <image class="use-img" src="../../../static/image/gywm.png"></image>
+      </view>
+      <view class="use-text">关于我们</view>
+      <view class="right-img">
+        <image src="../../../static/image/right.png"></image>
+      </view>
+    </view>
+  </view>
+</view>

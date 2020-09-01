@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "账本审批",
+  "usingComponents": {
+    "popup": "../component/popup/popup"
+  }
+}

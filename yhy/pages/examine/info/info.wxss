@@ -1,0 +1,102 @@
+@import '../../../static/css/flex';
+
+page {
+  background: #f8f8f8;
+}
+
+.view-padding {
+  padding: 24rpx 30rpx;
+  font-size: 28rpx;
+  background: #fff;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #f6f6f6;
+}
+
+.right-content {
+  color: #cacaca;
+}
+
+.pages .border {
+  border-top: 16rpx solid #f8f8f8;
+}
+
+.view-cebter {
+  background: #fff;
+  padding: 30rpx 0;
+}
+
+.top-content {
+  width: 400rpx;
+  height: 225rpx;
+  border-radius: 10rpx; overflow: hidden;
+  border: 1rpx dashed rgba(151, 151, 151, 1);
+}
+.top-content image{
+   width: 400rpx;
+  height: 225rpx;
+}
+.bottom-content {
+  padding-top: 20rpx;
+  font-size: 28rpx;
+}
+
+.other-text {
+  font-size: 28rpx;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+
+.border-bottom-type {
+  margin-bottom: 30rpx;
+}
+
+.button-cont {
+  padding: 0 95rpx;
+  box-sizing: border-box;
+  margin: 60rpx 0;
+}
+
+.button-cont button {
+  width: 240rpx;
+  height: 80rpx;
+  font-size: 34rpx;
+  line-height: 80rpx;
+  border-radius: 8rpx;
+}
+
+.button-cont .left-content button {
+  color: #3b99fa;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.button-cont .right-content button {
+  background: rgba(59, 153, 250, 1);
+  color: #fff;
+}
+.center-view {
+  display: flex;
+  text-align: left;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+.center-view text {
+  color: #888;
+  font-size: 30rpx;
+}
+
+.center-view input {
+  text-align: left;
+  font-size: 36rpx;
+  color: #333;
+  padding: 0 25rpx;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.center-view textarea {
+  font-size: 28rpx;
+
+}

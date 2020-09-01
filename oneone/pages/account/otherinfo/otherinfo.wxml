@@ -1,0 +1,41 @@
+<view class="pages">
+  <form bindsubmit="uploadCommit">
+    <view class="type-show" wx:if="{{type == 1}}">
+      <view class="typeOne">
+        <view class="add-tip">
+          <text>请上传相关资料，并录入信息</text>
+        </view>
+      </view>
+      <view class="img-item">
+        <uploadImg showImgUrl="{{blOrUscc}}" name="blOrUscc"></uploadImg>
+        <view class="img-text">营业执照复印件或统一社会信用代码复印件</view>
+      </view>
+      <view class="img-item">
+        <uploadImg showImgUrl="{{bankAccountProve}}" name="bankAccountProve"></uploadImg>
+        <view class="img-text">银行账户证明</view>
+      </view>
+      <view class="img-item margin-none">
+        <uploadImg showImgUrl="{{newImgUrl}}"></uploadImg>
+      </view>
+    </view>
+    <view>
+      <view class="typeOne">
+        <view class="add-tip">
+          <text>请上传其他资料，并录入信息</text>
+        </view>
+      </view>
+      <view class="img-item">
+        <uploadImg showImgUrl="{{otherData[0].otherDataVlaue}}" name="one"></uploadImg>
+      </view>
+      <view class="img-item">
+        <uploadImg showImgUrl="{{otherData[1].otherDataVlaue}}" name="two"></uploadImg>
+      </view>
+      <view class="img-item">
+        <uploadImg showImgUrl="{{otherData[2].otherDataVlaue}}" name="three"></uploadImg>
+      </view>
+    </view>
+    <view class="btnCont margin-cont">
+      <button class="true-btn"  formType='submit'>确认无误，上传</button>
+    </view>
+  </form>
+</view>

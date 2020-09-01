@@ -1,0 +1,41 @@
+<view class="pages box_sizing_pd">
+  <view class="nav-item-content">
+    <!-- <view class="item-list rbox box_space_b box_y_center">
+      <text>采购单号</text>
+      <input value="{{addData.realName}}" bindinput="bindAndSet" data-key="addData.realName"></input>
+    </view> -->
+    <!-- <view class="item-list rbox box_space_b box_y_center">
+      <text>货物类型</text>
+      <input value="{{addData.realName}}" bindinput="bindAndSet" data-key="addData.realName"></input>
+    </view> -->
+    <view class="item-list rbox box_space_b box_y_center">
+      <text>货物名称</text>
+      <picker bindchange="bindcompanyTypechange" value="{{typeArr[optionIndex][goodsName]}}" range-key="goodsName" range="{{goodArr}}">
+        <view class="picker">
+          {{goodArr[optionIndex].goodsName}}
+        </view>
+      </picker>
+      <!-- <input value="{{addData.realName}}" bindinput="bindAndSet" data-key="addData.realName"></input> -->
+    </view>
+    <view class="item-list rbox box_space_b box_y_center">
+      <text>采购单价</text>
+      <input value="{{addData.purchaseUnitPrice}}" disabled></input>
+    </view>
+    <view class="item-list rbox box_space_b box_y_center">
+      <text>数量</text>
+      <input value="{{addData.purchaseNumber}}" bindinput="bindAndSet" data-key="addData.purchaseNumber"></input>
+    </view>
+    <view class="item-list rbox box_space_b box_y_center">
+      <text>总额</text>
+      <input value="{{addData.purchaseNumber * addData.purchaseUnitPrice}}"  disabled></input>
+    </view>
+    <view class="item-list rbox box_space_b box_y_center">
+      <text>说明</text>
+      <input value="{{addData.remark}}" bindinput="bindAndSet" data-key="addData.remark"></input>
+    </view>
+  </view>
+  <view class="btn-cont box_space_b rbox">
+    <button class="cbtn" bindtap="back">取消</button>
+    <button class="sbtn" bindtap="add">保存</button>
+  </view>
+</view>

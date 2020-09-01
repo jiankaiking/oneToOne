@@ -1,0 +1,40 @@
+{
+  "pages": [
+
+    "pages/login/login",
+    "pages/repertory/index/index",
+    "pages/sell/sellInfo/sellInfo",
+    "pages/sell/deliver/deliver",
+    "pages/sell/deliverInfo/deliverInfo",
+    "pages/sell/addSellInfo/addSellInfo",
+    "pages/sell/index/index",
+    "pages/sell/addsell/addsell",
+    "pages/repertory/info/info"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#7F8389",
+    "selectedColor": "#3B99FA",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/repertory/index/index",
+        "iconPath": "./static/image/kc.png",
+        "selectedIconPath": "./static/image/kcs.png",
+        "text": "库存管理"
+      },
+      {
+        "pagePath": "pages/sell/index/index",
+        "iconPath": "./static/image/xs.png",
+        "selectedIconPath": "./static/image/xss.png",
+        "text": "销售管理"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

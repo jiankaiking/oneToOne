@@ -1,0 +1,7 @@
+<view class="pages">
+  <view class="about-content cbox box_y_center">
+     <image src="../../../static/image/logo.png"></image>
+     <view class="name">xxxx</view>
+     <view class="app-v">版本号：V1.0</view>
+  </view>
+</view>

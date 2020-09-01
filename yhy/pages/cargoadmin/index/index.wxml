@@ -1,0 +1,21 @@
+<view class="pages">
+  <view class="top-tabcad box_space_a rbox box_y_center">
+    <view class="card-item {{tipIndex == 0?'active':''}}" bindtap="changeTipIndex" data-index="0">货物</view>
+    <view class="card-item {{tipIndex == 1?'active':''}}" bindtap="changeTipIndex" data-index="1">货物类型</view>
+  </view>
+  <view class="messages-content box_sizing_pd ">
+    <view class="item" wx:for="{{listArr}}" wx:key="{{index}}" bindtap="goInfo" data-id="{{item.id}}">
+      <view class="item-info-top rbox box_space_b">
+        <view class="info-name">名称：{{tipIndex == 0?item.goodsName:item.typeName}}</view>
+        <view class="info-money" wx:if="{{tipIndex == 0}}">¥ {{item.unitPrice}}
+          <text>元</text>
+        </view>
+      </view>
+      <view class="item-info-bot">描述：{{item.remark}}</view>
+    </view>
+  </view>
+
+  <view class="add-box" bindtap="go" data-r="../addcargo/addcargo?type={{tipIndex}}">
+    <image src="../../../static/image/addzb.png"></image>
+  </view>
+</view>

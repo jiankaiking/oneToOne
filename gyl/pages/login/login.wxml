@@ -1,0 +1,22 @@
+<view class="login-page">
+  <view class="login-box cbox box_y_center">
+    <image class="login-logo" src="../../static/image/logo.png"></image>
+    <text class="login-title">一禾一</text>
+  </view>
+  <view class="login-form box_sizing_pd">
+    <view class="login-form-item rbox box_y_center">
+      <view class="form-select">+86</view>
+      <input bindinput='getName' placeholder="请输入手机号码" />
+    </view>
+    <view class="login-form-item rbox box_y_center">
+      <input placeholder="请输入密码" bindinput='getPassWord' />
+    </view>
+    <!-- <view class="login-form-item rbox box_y_center">
+      <input placeholder="请输入验证码" />
+      <image class="code-img" src="../../static/image/logo.png"></image>
+    </view> -->
+    <view class="btn-view">
+      <button class="true-btn" bindtap="login">登录</button>
+    </view>
+  </view>
+</view>

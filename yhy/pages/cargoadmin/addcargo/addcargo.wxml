@@ -1,0 +1,43 @@
+<view class="pages">
+  <view class="box_sizing_pd">
+    <view wx:if="{{type == 0}}">
+      <view class="add-item rbox box_space_b">
+        <text>名称</text>
+        <input placeholder="请输入"  value="{{goods.goodsName}}" bindinput="bindAndSet" data-key="goods.goodsName"></input>
+      </view>
+      <view class="add-item rbox box_space_b">
+        <text>类型</text>
+        <view class="right-img rbox box_y_center">
+          <picker bindchange="bindcompanyTypechange" value="{{goods.goodsTypeId}}" range-key="typeName"  range="{{typeArr}}">
+            <view class="picker">
+              {{typeArr[optionIndex].typeName}}
+            </view>
+          </picker>
+        </view>
+        <!-- <input placeholder="请输入"  value="{{goods.goodsName}}" bindinput="bindAndSet" data-key="goods.goodsName"></input> -->
+      </view>
+      <view class="add-item rbox box_space_b">
+        <text>单价</text>
+        <input placeholder="请输入"  value="{{goods.unitPrice}}" bindinput="bindAndSet" data-key="goods.unitPrice"></input>
+      </view>
+      <view class="add-item rbox box_space_b">
+        <text>描述</text>
+        <input placeholder="请输入"  value="{{goods.remark}}" bindinput="bindAndSet" data-key="goods.remark"></input>
+      </view>
+    </view>
+    <view wx:if="{{type == 1}}">
+      <view class="add-item rbox box_space_b">
+        <text>名称</text>
+        <input placeholder="请输入"  value="{{typeObj.typeName}}" bindinput="bindAndSet" data-key="typeObj.typeName"></input>
+      </view>
+      <view class="add-item rbox box_space_b">
+        <text>备注</text>
+        <input placeholder="请输入"  value="{{typeObj.remark}}" bindinput="bindAndSet" data-key="typeObj.remark"></input>
+      </view>
+    </view>
+  </view>
+  <view class="btn-cont box_space_b rbox">
+    <button class="cbtn">取消</button>
+    <button class="sbtn" bindtap="add">保存</button>
+  </view>
+</view>

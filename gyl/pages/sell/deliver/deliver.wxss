@@ -1,0 +1,35 @@
+/* pages/repertory/info/info.wxss *//* pages/home/messages/messages.wxss */
+@import '../../../static/css/flex';
+.item-list{
+  border-bottom: 1rpx solid #F6F6F6; font-size: 28rpx;height: 90rpx;
+}
+.item-list text{
+  min-width: 120rpx;
+}
+.item-list text:last-child{
+  text-align: right;
+}
+.item-list input{
+  height: 90%; width: 100%; text-align: right;
+}
+.picker{
+   height: 80rpx; width: 400rpx; text-align: right; line-height: 80rpx;
+}
+.btn-cont {
+  padding: 0 65rpx;
+  box-sizing: border-box;
+  margin-top: 120rpx;
+}
+
+.btn-cont  button {
+  width: 240rpx; border:none;
+  height: 80rpx;
+  border-radius: 8rpx;
+  font-size: 32rpx;
+}
+.cbtn{
+  background:rgba(0,0,0,0.05); color: #3B99FA
+}
+.sbtn{
+  background:rgba(59,153,250,1); color: #fff;
+}

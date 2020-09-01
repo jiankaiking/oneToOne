@@ -1,0 +1,76 @@
+/* pages/home/messages/messages.wxss */
+@import '../../../static/css/flex';
+
+page {
+  background: #f6f6f6;
+}
+
+.top-tabcad {
+  background: #fff;
+  height: 87rpx;
+}
+
+.card-item {
+  position: relative;
+  color: #999;
+  font-size: 32rpx;
+  font-weight: 600;
+}
+
+.card-item::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 8rpx;
+  background: #fff;
+  bottom: -22rpx;
+  left: 0;
+}
+
+.card-item.active::after {
+  background: #3b99fa;
+}
+
+.card-item.active {
+  color: #3b99fa;
+}
+
+.content-tip {
+  padding: 28rpx 0;
+  font-size: 24rpx;
+}
+
+.content-tip view:nth-child(1) {
+  color: #666;
+}
+
+.content-tip view:nth-child(2) {
+  color: #3b99fa;
+}
+
+.messages-item {
+  background: #fff;
+  box-shadow: 0px 0px 10px 0px rgba(239, 239, 239, 1);
+  border-radius: 12rpx; margin-bottom: 32rpx;
+}
+.item-top{
+  padding-top: 28rpx;
+}
+.top-left-text{
+  font-size: 32rpx; color: #333333
+}
+
+.top-right-text{
+  font-size: 24rpx; color: #666666
+}
+
+.center-text{
+  font-size: 24rpx; color: #666666; margin: 20rpx 0 27rpx;
+}
+.top-right-text image{
+  height: 22rpx; width: 14rpx; margin-left: 10rpx; margin-top: 10rpx;
+}
+
+.bottom-time{
+  padding: 19rpx 30rpx; font-size: 24rpx; color: #666666; border-top: 1rpx solid #E5E5E5;
+}

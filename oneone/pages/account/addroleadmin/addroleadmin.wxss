@@ -1,0 +1,31 @@
+@import "../../../static/css/flex";
+
+.add-tip {
+  background: #F8F8F8;
+  font-size: 28rpx; font-weight: 600; padding: 30rpx;
+}
+
+.add-item input {
+  width: 100%;
+  text-align: right;
+}
+
+.add-item {
+  border-bottom: 1rpx solid #f6f6f6;
+  font-size: 28rpx;
+  padding: 25rpx 0;
+}
+
+.add-name {
+  width: 200rpx;
+}
+
+.margin-cont {
+  margin-top: 120rpx;
+}
+.right-img image{
+  width: 12rpx; height: 22rpx; margin-left: 12rpx;
+}
+.picker{
+  width: 300rpx; text-align: right;
+}

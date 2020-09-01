@@ -1,0 +1,37 @@
+<wxs module="filter" src="../../filter/index.wxs"></wxs>
+<view class="pages box_sizing_pd">
+  <view class="nav-item-content">
+    <view class="item-list rbox box_space_b box_y_center">
+      <text>货物名称</text>
+      <text>{{info.goodsName}}</text>
+    </view>
+    <view class="item-list rbox box_space_b box_y_center">
+      <text>货物数量</text>
+      <text>{{info.goodsNumber}}</text>
+    </view>
+    <view class="item-list rbox box_space_b box_y_center">
+      <text>销售单价</text>
+      <text>{{info.salesUnitPrice}}</text>
+    </view>
+    <view class="item-list rbox box_space_b box_y_center">
+      <text>销售额</text>
+      <text>{{info.salesTotalPrice}}</text>
+    </view>
+    <view class="item-list rbox box_space_b box_y_center">
+      <text>销售时间</text>
+      <text>{{filter.getDate(info.salesTime)}}</text>
+    </view>
+    <view class="item-list rbox box_space_b box_y_center">
+      <text>创建时间</text>
+      <text>{{filter.getDate(info.createTime)}}</text>
+    </view>
+    <view class="item-list rbox box_space_b box_y_center">
+      <text>创建人</text>
+      <text>{{info.userName}}</text>
+    </view>
+  </view>
+  <!-- <view class="btn-cont box_space_b rbox">
+    <button class="cbtn" bindtap="back">取消</button>
+    <button class="sbtn" bindtap="add">保存</button>
+  </view> -->
+</view>

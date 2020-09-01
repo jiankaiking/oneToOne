@@ -1,0 +1,44 @@
+<wxs module="filter" src="../../filter/index.wxs"></wxs>
+
+<view class="pages">
+  <view class="top-tabcad box_space_a rbox box_y_center">
+    <view class="card-item {{tipIndex == 0?'active':''}}" bindtap="changeTipIndex" data-index="0">出库</view>
+    <view class="card-item {{tipIndex == 1?'active':''}}" bindtap="changeTipIndex" data-index="1">入库</view>
+    <view class="card-item {{tipIndex == 2?'active':''}}" bindtap="changeTipIndex" data-index="2">盘库</view>
+  </view>
+  <view>
+    <view class="messages-content box_sizing_pd ">
+      <view class="item" wx:if="{{tipIndex == 0}}" wx:for="{{listArr}}" wx:key="{{index}}" bindtap="go" data-id="{{item.id}}">
+        <view class="item-info-top rbox box_space_b">
+          <view class="info-name">出库单号：{{item.orderNo}}</view>
+          <view class="info-name item-width">出库人：{{item.userName}}</view>
+        </view>
+        <view class="item-info-bot  rbox box_space_b">
+          <view>出库数量：{{item.number}}</view>
+          <view class="item-width">出库时间:{{filter.getDate(item.createTime)}}</view>
+        </view>
+      </view>
+      <view class="item" wx:if="{{tipIndex == 1}}" wx:for="{{listArr}}" wx:key="{{index}}" bindtap="go" data-id="{{item.id}}">
+        <view class="item-info-top rbox box_space_b">
+          <view class="info-name">入库单号：{{item.orderNo}}</view>
+          <view class="info-name item-width">入库人：{{item.userName}}</view>
+        </view>
+        <view class="item-info-bot  rbox box_space_b">
+          <view>入库数量：{{item.number}}</view>
+          <view class="item-width">入库时间:{{filter.getDate(item.createTime)}}</view>
+        </view>
+      </view>
+      <view class="item" wx:if="{{tipIndex == 2}}" wx:for="{{listArr}}" wx:key="{{index}}">
+        <view class="item-info-top rbox box_space_b">
+          <view class="info-name">货物名称：{{item.goodsName}}</view>
+          <view class="info-name item-width">入库数量：{{item.intoNumber}}</view>
+        </view>
+        <view class="item-info-bot  rbox box_space_b">
+          <view>出库数量：{{item.outNumber}}</view>
+          <view class="item-width">剩余库存:{{item.residueNumber}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="repertory-info"></view>
+</view>

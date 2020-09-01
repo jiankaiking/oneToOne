@@ -1,0 +1,28 @@
+<view class="pages box_sizing_pd">
+  <view class="nav-item-content">
+    <view class="item-list rbox box_space_b box_y_center">
+      <text>快递公司</text>
+       <input value="{{addData.shipName}}" bindinput="bindAndSet" data-key="addData.shipName"></input>
+    </view>
+    <view class="item-list rbox box_space_b box_y_center">
+      <text>快递单号</text>
+      <input value="{{addData.shipOrderNo}}" bindinput="bindAndSet" data-key="addData.shipOrderNo"></input>
+    </view>
+    <view class="item-list rbox box_space_b box_y_center">
+      <text>收件人</text>
+      <input value="{{addData.recipients}}" bindinput="bindAndSet" data-key="addData.recipients"></input>
+    </view>
+    <view class="item-list rbox box_space_b box_y_center">
+      <text>联系方式</text>
+      <input value="{{addData.contact}}" bindinput="bindAndSet" data-key="addData.contact"></input>
+    </view>
+    <view class="item-list rbox box_space_b box_y_center">
+      <text>收货地址</text>
+      <input value="{{addData.address}}" bindinput="bindAndSet" data-key="addData.address"></input>
+    </view>
+  </view>
+  <view class="btn-cont box_space_b rbox">
+    <button class="cbtn" bindtap="back">取消</button>
+    <button class="sbtn" bindtap="trueSave">保存</button>
+  </view>
+</view>

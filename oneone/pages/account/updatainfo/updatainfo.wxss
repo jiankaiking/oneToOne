@@ -1,0 +1,16 @@
+@import "../../../static/css/flex";
+ page{
+   background: #F8F8F8;
+ }
+.add-tip {
+  font-size: 28rpx; font-weight: 600; padding: 30rpx;
+}
+.img-item{
+  padding: 30rpx 0; background: #fff; margin-bottom: 30rpx;
+}
+.img-text{
+  text-align: center; margin-top: 20rpx; font-size: 28rpx;
+}
+.margin-cont{
+  margin-top: 100rpx;
+}

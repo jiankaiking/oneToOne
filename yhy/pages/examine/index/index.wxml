@@ -1,0 +1,36 @@
+<view class="pages">
+  <view class="top-tabcad box_space_a rbox box_y_center">
+    <view class="card-item {{tipIndex == 0?'active':''}}" bindtap="changeTipIndex" data-index="0">待审批</view>
+    <view class="card-item {{tipIndex == 1?'active':''}}" bindtap="changeTipIndex" data-index="1">全部</view>
+  </view>
+  <view class="messages-content box_sizing_pd ">
+    <view class="messages-item" 
+          wx:for="{{listArr}}" 
+          wx:key="{{index}}"  
+          bindtap="goInfo" 
+          data-item="{{item}}">
+      <view class="item-top box_sizing_pd rbox box_space_b">
+        <view class="top-left-text">编号:{{item.billNo}}</view>
+        <view class="top-right-text  rbox box_y_center">
+        </view>
+      </view>
+      <view class="center-text box_sizing_pd line-clamp2">公司名称：{{item.customerName}}</view>
+      <view class="center-money box_sizing_pd line-clamp2 {{item.status == 0?'':(item.status == 1?'success':'erro')}}">¥ {{item.amount}}
+        <text>元</text>
+      </view>
+      <view class="bottom-time box_sizing_pd rbox box_space_b">
+        <view class="top-left-text  rbox box_y_center">
+          <view class="wait-img rbox box_y_center">
+            <image wx:if="{{item.status == 0}}" class="img-icon" src="../../../static/image/wait.png"></image>
+          </view>
+          <view wx:if="{{item.status == 0}}">待审批</view>
+          <view class="success" wx:if="{{item.status == 1}}">已通过</view>
+          <view class="erro" wx:if="{{item.status == 2}}">已驳回</view>
+        </view>
+        <view class="top-right-text  rbox box_y_center">
+          <button wx:if="{{item.status == 0}}">立刻审批</button>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

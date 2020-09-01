@@ -1,0 +1,19 @@
+<view class="pages">
+  <view class="top-tip box_sizing_pd">
+    <text>合作洽谈</text>
+    <text>留下您的联系方式，我们将在24小时内与您取得联系</text>
+  </view>
+  <view class="contact-info box_sizing_pd">
+    <view class="info-item"><input placeholder="怎么称呼您？"></input></view>
+    <view class="info-item"><input placeholder="您的手机号是？"></input></view>
+    <view class="info-item"><input placeholder="您的公司名称是？"></input></view>
+  </view>
+  <view class="my-contact box_sizing_pd">
+     <view class="my-text show-color rbox info-item"><text>您还可以直接致电我们的业务负责人</text></view>
+     <view class="my-text rbox box_space_b info-item"><text>联系电话</text><text>14583939393</text></view>
+     <view class="my-text rbox box_space_b info-item" ><text>商务洽谈</text><text>dsdwjnc@163.com</text></view>
+  </view>
+  <view class="btncont box_sizing_pd">
+     <button class="true-btn"> 提交信息</button>
+  </view>
+</view>

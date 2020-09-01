@@ -1,0 +1,17 @@
+@import "../../../static/css/flex";
+
+.about-content image {
+  width: 140rpx;
+  height: 140rpx;
+  padding-top: 171rpx;
+}
+
+.name {
+  color: #666;
+  font-size: 32rpx; padding: 20rpx 0;
+}
+
+.app-v {
+  color: #999999;
+  font-size: 28rpx;
+}

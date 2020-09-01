@@ -1,0 +1,39 @@
+@import '../../../static/css/flex';
+
+.add-item {
+  border-bottom: 1rpx solid #f6f6f6;
+  font-size: 28rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+}
+
+.add-item input {
+  height: 100%;
+  text-align: right;
+  width: 80%;
+}
+.picker{
+  height: 90rpx;
+}
+.right-img{
+  height: 100%; width: 80%; display: block; text-align: right;
+}
+
+.btn-cont {
+  padding: 0 65rpx;
+  box-sizing: border-box;
+  margin-top: 120rpx;
+}
+
+.btn-cont  button {
+  width: 240rpx; border:none;
+  height: 80rpx;
+  border-radius: 8rpx;
+  font-size: 32rpx;
+}
+.cbtn{
+  background:rgba(0,0,0,0.05); color: #3B99FA
+}
+.sbtn{
+  background:rgba(59,153,250,1); color: #fff;
+}

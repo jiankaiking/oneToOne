@@ -1,0 +1,40 @@
+<view class="pages">
+  <view class="home-content box_sizing_pd">
+    <view class="home-content-title rbox box_space_b">
+      <view class="clamp1">
+        <text>{{myInfo.customerName}}</text>
+      </view>
+      <view>
+        <picker range="{{pickArr}}" mode="selector" bindchange="bindPickerChange" value="{{mutIndex}}" range-key="customerName">
+          <text>切换</text>
+        </picker>
+      </view>
+    </view>
+    <view class="bannner">
+       <image src="../../../static/image/banner.png"></image>
+    </view>
+    <view class="home-menu rbox box_space_a">
+      <view class="menu-item cbox box_y_center" bindtap="gotabbar" data-r="../../account/index/index">
+        <image class="menu-img" src="../../../static/image/menuone.png"></image>
+        <text>我的账本</text>
+      </view>
+      <view class="menu-item cbox box_y_center" bindtap="go" data-r="../messages/messages">
+        <image class="menu-img" src="../../../static/image/menutwo.png"></image>
+        <text>消息中心</text>
+      </view>
+    </view>
+  </view>
+  <view class="news-content">
+    <view class="news-title">新闻动态</view>
+    <view class="new-item box_sizing_pd" wx:for="{{2}}">
+      <view class="new-item-title line-clamp1">“燃”在一起 战未来，花脸支付2019年会…</view>
+      <view class="new-img rbox box_space_a">
+        <view><image src="../../../static/image/new1.png"></image></view>
+        <view><image src="../../../static/image/new2.png"></image></view>
+        <view><image src="../../../static/image/new3.png"></image></view>
+      </view>
+      <view class="new-info line-clamp1">1月18日，花脸2019年会在杭州西溪雷迪森大酒店 …</view>
+      <view class="new-date">2019-08-19</view>
+    </view>
+  </view>
+</view>

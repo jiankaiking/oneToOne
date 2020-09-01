@@ -1,0 +1,27 @@
+@import "../../../static/css/flex";
+
+.top-tip {
+  height: 87rpx;
+  background: #f8f8f8;
+  line-height: 87rpx;
+  font-size: 28rpx;
+  color: #333
+}
+.top-tip text:nth-child(1){
+  margin-right: 17rpx;
+}
+.top-tip text:nth-child(2){
+  color: #666666; font-size: 24rpx;
+}
+.info-item{
+  padding: 25rpx 0 24rpx; border-bottom: 1rpx solid #F6F6F6; font-size: 28rpx;
+}
+.my-contact{
+  border-top: 16rpx solid #F5F5F5;
+}
+.show-color{
+  font-size: 24rpx; color: #666666;
+}
+.btncont{
+  margin-top: 119rpx;
+}
